@@ -1,0 +1,65 @@
+/* LoginPage.css */
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(0, 0) scale(1.1);
+    }
+}
+
+@keyframes borderGrow {
+    0% {
+        width: 10vw;
+        height: 10vh;
+    }
+    100% {
+        width: 100vw;
+        height: 190vh;
+    }
+}
+
+.half-circle-login {
+    position: fixed;
+    bottom: -100%;
+    right: -50%;
+    width: 100vw;
+    height: 190vh;
+    background-color: #2eee07;
+    border-radius: 100%;
+    z-index: 0;
+    animation: borderGrow 2s ease forwards, pulse 5s infinite ease-in-out 2s;
+}
+
+/* Theme-specific styles */
+.light-theme .half-circle-login {
+    background-color:  #2eee07;
+}
+
+.dark-theme .half-circle-login {
+    background-color: #2eee07;
+    filter: brightness(0.7);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .half-circle-login {
+        top: -140%;
+        right: -90%;
+        width: 190vw;
+        height: 170vh;
+        animation: pulse 6s infinite ease-in-out;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .half-circle-login {
+        top: -140%;
+        right: -90%;
+        width: 190vw;
+        height: 170vh;
+        animation: pulse 7s infinite ease-in-out;
+    }
+}
