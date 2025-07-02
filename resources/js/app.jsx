@@ -26,7 +26,7 @@ const ThemeWrapper = ({ children }) => {
 
 const App = () => {
     useEffect(() => {
-        ReactGA.initialize('G-ERV17HSB66');
+        ReactGA.initialize('G-SE5TYB3Z80');
     }, []);
 
     return (
